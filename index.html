@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Selector</title>
+</head>
+<body>
+    <h1>Choose a Country</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.country.label }}<br>
+            {{ form.country() }}
+        </div>
+        <br>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+    {% if country %}
+    <h2>You selected: {{ country }}</h2>
+    {% endif %}
+</body>
+</html>
